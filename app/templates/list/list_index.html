@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <div class="row" style="margin: 16px ">
+    <div class="center">
+      <img src="{{ list.picture_url }}" alt="" class="circle" width="100" height="100">
+      <h3 class="header col s12 light">{{ list.title }}</h3>
+      <p>created by <b>{{ list.creator.nickname }}</b> </p>
+    </div>
+  </div>
+  <div class="row center">
+    <form class="" action="index.html" method="post">
+
+    </form>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+
+      <ul class="collection">
+        <li class="collection-item"> <div class="">
+          <form class="" action="index.html" method="post">
+
+          </form>
+        </div> </li>
+        {% for item in list.items %}
+        <li class="collection-item">{{item.title}}</li>
+        {% endfor %}
+      </ul>
+
+
+    </div>
+  </div>
+
+{% endblock %}

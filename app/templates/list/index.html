@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1 class="header center red-text">LISTAS</h1>
+  <div class="row center">
+    <h5 class="header col s12 light">¡Crea Listas de Cosas!</h5>
+  </div>
+  <div class="row center">
+    <form class="" action="index.html" method="post">
+
+    </form>
+  </div>
+  <hr>
+  <div class="container-fluid">
+    <div class="row">
+
+      {% for list in lists %}
+      <div class="col s6 m3">
+        <div class="card">
+        <div class="card-image">
+          <img width="200" height="200" src="{{ list.picture_url }}">
+          <span class="card-title">{{ list.title }}</span>
+        </div>
+        <div class="card-action">
+          <a href="/lists/{{ list.id }}">Ver Lista</a>
+        </div>
+      </div>
+      </div>
+      {% endfor %}
+
+    </div>
+  </div>
+
+{% endblock %}
